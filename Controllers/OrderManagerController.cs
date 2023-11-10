@@ -19,6 +19,7 @@ namespace OrderManageAPI.Controllers
         public async Task<IEnumerable<OrderDTO>> GetAll()
          => await _service.GetAllOrdersAsync();
 
+
         [HttpGet("{Id}")]
         public async Task<ActionResult<OrderDTO>> Get(int Id)
             => Ok(await _service.GetSingleOrderAsync(Id));
